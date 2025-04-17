@@ -74,3 +74,29 @@ window.addEventListener('resize', setVhVariable);
     });
 
     updateSlide();
+
+    // 인스타그램 버튼 추가
+    const menuList = document.getElementById("menuList");
+    const instaLink = document.createElement("a");
+    instaLink.href = "https://www.instagram.com/scfest.official/";
+    instaLink.target = "_blank";
+    instaLink.style.display = "flex";
+    instaLink.style.alignItems = "center";
+    instaLink.style.gap = "6px";
+    instaLink.style.margin = "10px";
+    instaLink.style.fontSize = "0.85rem";
+    instaLink.style.color = "#fff";
+    instaLink.style.textDecoration = "none";
+
+    const instaIcon = document.createElement("img");
+    instaIcon.src = "https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png";
+    instaIcon.alt = "Instagram Icon";
+    instaIcon.style.width = "16px";
+    instaIcon.style.height = "16px";
+
+    const instaText = document.createElement("span");
+    instaText.textContent = "축제 공식 계정";
+
+    instaLink.appendChild(instaIcon);
+    instaLink.appendChild(instaText);
+    menuList.appendChild(instaLink);
