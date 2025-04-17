@@ -1,3 +1,12 @@
+// Viewport height 계산해서 CSS 변수로 설정
+function setVhVariable() {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+setVhVariable();
+window.addEventListener('resize', setVhVariable);
+
+
     const slidesWrapper = document.getElementById('slidesWrapper');
     const slides = document.querySelectorAll('.slide');
     const totalSlides = slides.length;
