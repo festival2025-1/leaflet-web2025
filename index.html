@@ -1,59 +1,22 @@
 <!DOCTYPE html>
+
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=5.0">
-  <title>서울서커스페스티벌 2025</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=5.0" name="viewport"/>
+<title>서울서커스페스티벌 2025</title>
+<link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-  <button class="menu-btn" onclick="toggleMenu()">☰</button>
-  <div class="menu-list" id="menuList">
-    <button onclick="goToSlideInstant(1)">🎪 축제 소개</button>
-    <button onclick="goToSlideInstant(3)">🎭 공연 정보</button>
-    <button onclick="goToSlideInstant(22)">🗓️ 일정표</button>
-    <button onclick="goToSlideInstant(25)">🗺️ 지도</button>
-  </div>
-
-  <div class="slider-container">
-    <div class="slides-wrapper" id="slidesWrapper">
-      <div class="slide"><img src="/images/main-poster.jpg" alt="메인 포스터">
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+<div class="menu-list" id="menuList"><button onclick="goToSlideInstant(1)">🎪 축제 소개</button><button onclick="goToSlideInstant(3)">🗓️ 일정표</button><button onclick="goToSlideInstant(6)">🗺️ 지도</button><button onclick="goToSlideInstant(8)">🎭 공연 정보</button></div>
+<div class="slider-container">
+<div class="slides-wrapper" id="slidesWrapper"><div class="slide"><img alt="메인 포스터" src="/images/main-poster.jpg"/>
+</div><div class="slide"><img alt="축제 정보 1" src="/images/festinfo1.jpg"/></div><div class="slide"><img alt="축제 정보 2" src="/images/festinfo2.jpg"/></div><div class="slide"><img alt="일정표 1" src="/images/timetable53.jpg"/></div><div class="slide"><img alt="일정표 2" src="/images/timetable54.jpg"/></div><div class="slide"><img alt="일정표 3" src="/images/timetable55.jpg"/></div><div class="slide"><img alt="지도 1" src="/images/map1.jpg"/></div><div class="slide"><img alt="지도 2" src="/images/map2.jpg"/></div><div class="slide"><img alt="공연 소개 1" src="/images/info1.jpg"/></div><div class="slide"><img alt="공연 소개 2" src="/images/info2.jpg"/></div><div class="slide"><img alt="공연 소개 3" src="/images/info3.jpg"/></div><div class="slide"><img alt="공연 소개 4" src="/images/info4.jpg"/></div><div class="slide"><img alt="공연 소개 5" src="/images/info5.jpg"/></div><div class="slide"><img alt="공연 소개 6" src="/images/info6.jpg"/></div><div class="slide"><img alt="공연 소개 7" src="/images/info7.jpg"/></div><div class="slide"><img alt="공연 소개 8" src="/images/info8.jpg"/></div><div class="slide"><img alt="공연 소개 9" src="/images/info9.jpg"/></div><div class="slide"><img alt="공연 소개 10" src="/images/info10.jpg"/></div><div class="slide"><img alt="공연 소개 11" src="/images/info11.jpg"/></div><div class="slide"><img alt="공연 소개 12" src="/images/info12.jpg"/></div><div class="slide"><img alt="공연 소개 13" src="/images/info13.jpg"/></div><div class="slide"><img alt="공연 소개 14" src="/images/info14.jpg"/></div><div class="slide"><img alt="공연 소개 15" src="/images/info15.jpg"/></div><div class="slide"><img alt="공연 소개 16" src="/images/info16.jpg"/></div><div class="slide"><img alt="공연 소개 17" src="/images/info17.jpg"/></div><div class="slide"><img alt="공연 소개 18" src="/images/info18.jpg"/></div><div class="slide"><img alt="공연 프로그램" src="/images/program.jpg"/></div></div>
+<div class="slide-indicator" id="slideIndicator">1 / 28</div>
 </div>
-      <div class="slide"><img src="/images/festinfo1.jpg" alt="축제 정보 1"></div>
-      <div class="slide"><img src="/images/festinfo2.jpg" alt="축제 정보 2"></div>
-      <div class="slide"><img src="/images/info1.jpg" alt="공연 소개 1"></div>
-      <div class="slide"><img src="/images/info2.jpg" alt="공연 소개 2"></div>
-      <div class="slide"><img src="/images/info3.jpg" alt="공연 소개 3"></div>
-      <div class="slide"><img src="/images/info4.jpg" alt="공연 소개 4"></div>
-      <div class="slide"><img src="/images/info5.jpg" alt="공연 소개 5"></div>
-      <div class="slide"><img src="/images/info6.jpg" alt="공연 소개 6"></div>
-      <div class="slide"><img src="/images/info7.jpg" alt="공연 소개 7"></div>
-      <div class="slide"><img src="/images/info8.jpg" alt="공연 소개 8"></div>
-      <div class="slide"><img src="/images/info9.jpg" alt="공연 소개 9"></div>
-      <div class="slide"><img src="/images/info10.jpg" alt="공연 소개 10"></div>
-      <div class="slide"><img src="/images/info11.jpg" alt="공연 소개 11"></div>
-      <div class="slide"><img src="/images/info12.jpg" alt="공연 소개 12"></div>
-      <div class="slide"><img src="/images/info13.jpg" alt="공연 소개 13"></div>
-      <div class="slide"><img src="/images/info14.jpg" alt="공연 소개 14"></div>
-      <div class="slide"><img src="/images/info15.jpg" alt="공연 소개 15"></div>
-      <div class="slide"><img src="/images/info16.jpg" alt="공연 소개 16"></div>
-      <div class="slide"><img src="/images/info17.jpg" alt="공연 소개 17"></div>
-      <div class="slide"><img src="/images/info18.jpg" alt="공연 소개 18"></div>
-      <div class="slide"><img src="/images/program.jpg" alt="공연 프로그램"></div>
-      <div class="slide"><img src="/images/timetable53.jpg" alt="일정표 1"></div>
-      <div class="slide"><img src="/images/timetable54.jpg" alt="일정표 2"></div>
-      <div class="slide"><img src="/images/timetable55.jpg" alt="일정표 3"></div>
-      <div class="slide"><img src="/images/map1.jpg" alt="지도 1"></div>
-      <div class="slide"><img src="/images/map2.jpg" alt="지도 2"></div>
-    </div>
-    <div class="slide-indicator" id="slideIndicator">1 / 28</div>
-  </div>
-
-  <button class="nav-btn prev-btn" onclick="changeSlide(-1)">◀</button>
-  <button class="nav-btn next-btn" onclick="changeSlide(1)">▶</button>
-
-  <script src="script.js"></script>
+<button class="nav-btn prev-btn" onclick="changeSlide(-1)">◀</button>
+<button class="nav-btn next-btn" onclick="changeSlide(1)">▶</button>
+<script src="script.js"></script>
 </body>
 </html>
-
-
