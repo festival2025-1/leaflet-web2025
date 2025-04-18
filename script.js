@@ -44,7 +44,7 @@ function showArrowsTemporarily() {
   arrowTimeout = setTimeout(() => {
     prevBtn.style.opacity = '0';
     nextBtn.style.opacity = '0';
-  }, 2500); // 2.5초 후 숨김
+  }, 2000); // 2초 후 숨김
 }
     function toggleMenu() {
       document.getElementById('menuList').classList.toggle('show');
