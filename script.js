@@ -100,3 +100,16 @@ window.addEventListener('resize', setVhVariable);
     instaLink.appendChild(instaIcon);
     instaLink.appendChild(instaText);
     menuList.appendChild(instaLink);
+
+document.addEventListener('click', function(event) {
+  const menu = document.getElementById('menuList');
+  const menuBtn = document.querySelector('.menu-btn');
+
+  // 메뉴가 열려 있고, 클릭한 곳이 메뉴나 버튼이 아닐 때 닫기
+  if (menu.classList.contains('show') &&
+      !menu.contains(event.target) &&
+      !menuBtn.contains(event.target)) {
+    menu.classList.remove('show');
+  }
+});
+
