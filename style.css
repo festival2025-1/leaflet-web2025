@@ -88,13 +88,13 @@
 
 .language-switcher {
   position: absolute;
-  top: 12px;
-  right: 10px; /* 👉 더 오른쪽 구석으로! */
+  top: 16px;
+  right: 12px; /* 👉 더 오른쪽 구석으로! */
   z-index: 30;
   background: rgba(0,0,0,0.6);
-  padding: 8px 14px; /* 👉 크기 약간 키움 */
+  padding: 7px 13px; /* 👉 크기 약간 키움 */
   border-radius: 12px;
-  font-size: 1.1rem; /* 👉 기존보다 1.2배 정도 큼 */
+  font-size: 1.0rem; /* 👉 기존보다 1.2배 정도 큼 */
 }
 
 .language-switcher a {
