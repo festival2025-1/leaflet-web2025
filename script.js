@@ -131,3 +131,5 @@ document.addEventListener('click', function(event) {
   }
 });
 
+updateSlide();
+showArrowsTemporarily();
