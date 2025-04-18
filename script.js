@@ -19,6 +19,8 @@ window.addEventListener('resize', setVhVariable);
     function updateSlide() {
       slidesWrapper.style.transform = `translateX(-${current * 100}vw)`;
       slideIndicator.textContent = `${current + 1} / ${totalSlides}`;
+      prevBtn.style.display = current === 0 ? 'none' : 'block';
+      nextBtn.style.display = current === totalSlides - 1 ? 'none' : 'block';
     }
 
     function changeSlide(direction) {
