@@ -27,8 +27,25 @@ window.addEventListener('resize', setVhVariable);
       if (current < 0) current = 0;
       if (current >= totalSlides) current = totalSlides - 1;
       updateSlide();
+      showArrowsTemporarily();
     }
 
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+let arrowTimeout;
+
+function showArrowsTemporarily() {
+  // 화살표 보이기
+  prevBtn.style.opacity = '1';
+  nextBtn.style.opacity = '1';
+
+  // 기존 타이머 제거 후 새로 시작
+  if (arrowTimeout) clearTimeout(arrowTimeout);
+  arrowTimeout = setTimeout(() => {
+    prevBtn.style.opacity = '0';
+    nextBtn.style.opacity = '0';
+  }, 2500); // 2.5초 후 숨김
+}
     function toggleMenu() {
       document.getElementById('menuList').classList.toggle('show');
     }
@@ -68,6 +85,7 @@ window.addEventListener('resize', setVhVariable);
       const angle = Math.abs(Math.atan2(deltaY, deltaX) * 180 / Math.PI);
 
       if (Math.abs(deltaX) > 50 && (angle < 15 || angle > 165)) {
+        showArrowsTemporarily();
         if (deltaX < 0) changeSlide(1);
         else changeSlide(-1);
       }
