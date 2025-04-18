@@ -67,7 +67,7 @@
 
     .menu-list {
       position: absolute;
-      top: 50px;
+      top: 12px;
       left: 10px;
       background: rgba(0,0,0,0.7);
       display: none;
@@ -85,6 +85,27 @@
       cursor: pointer;
       font-size: 1rem;
     }
+
+.language-switcher {
+  position: absolute;
+  top: 20px;
+  right: 10px; /* 👉 더 오른쪽 구석으로! */
+  z-index: 30;
+  background: rgba(0,0,0,0.6);
+  padding: 8px 14px; /* 👉 크기 약간 키움 */
+  border-radius: 12px;
+  font-size: 1.1rem; /* 👉 기존보다 1.2배 정도 큼 */
+}
+
+.language-switcher a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.language-switcher a:hover {
+  text-decoration: underline;
+}
 
     .slide-indicator {
       position: absolute;
