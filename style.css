@@ -88,7 +88,7 @@
 
 .language-switcher {
   position: absolute;
-  top: 20px;
+  top: 12px;
   right: 10px; /* 👉 더 오른쪽 구석으로! */
   z-index: 30;
   background: rgba(0,0,0,0.6);
